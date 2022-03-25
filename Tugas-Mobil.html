@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+
+    <style>
+      #container {
+        display: flex;
+        justify-content: center;
+        padding-top: 120px;
+      }
+      .divSatu {
+        height: 450px;
+        width: 250px;
+        /* border: 1px solid black; */
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: hsl(31, 77%, 52%);
+      }
+      .divDua {
+        height: 450px;
+        width: 250px;
+        /* border: 1px solid black; */
+        background-color: hsl(184, 100%, 22%);
+      }
+      .divTiga {
+        height: 450px;
+        width: 250px;
+        /* border: 1px solid black; */
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: hsl(179, 100%, 13%);
+      }
+      img {
+        margin: 25px;
+      }
+      h1 {
+        margin: 25px;
+        color: white;
+        font-family: "Big Shoulders Display";
+        font-weight: 700;
+      }
+      p {
+        margin: 25px;
+        font-size: 15px;
+        color: white;
+        font-family: "Lexend Deca";
+        font-weight: 400;
+      }
+      button {
+        margin: 25px;
+        border-radius: 20px;
+        height: 40px;
+        width: 120px;
+        cursor: pointer;
+        border: none;
+      }
+      .buttonSatu {
+        color: hsl(31, 77%, 52%);
+      }
+      .buttonDua {
+        color: hsl(184, 100%, 22%);
+      }
+      .buttonTiga {
+        color: hsl(179, 100%, 13%);
+      }
+      @media only screen and (max-width: 375px) {
+        #container {
+          display: block;
+          padding-top: 20px;
+        }
+        .divSatu,
+        .divDua,
+        .divTiga {
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      var container = document.getElementById("container");
+
+      var elementSatu = document.createElement("div");
+      elementSatu.classList += "divSatu";
+      var imageSatu = document.createElement("img");
+      imageSatu.classList += "imageSatu";
+      imageSatu.src = "icon-sedans.svg";
+      elementSatu.appendChild(imageSatu);
+
+      var headerSatu = document.createElement("h1");
+      headerSatu.innerHTML = "SEDANS";
+      elementSatu.appendChild(headerSatu);
+
+      var pSatu = document.createElement("p");
+      pSatu.innerHTML =
+        "Choose sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.";
+      elementSatu.appendChild(pSatu);
+
+      var buttonSatu = document.createElement("button");
+      buttonSatu.innerHTML = "Learn More";
+      buttonSatu.classList += "buttonSatu";
+      elementSatu.appendChild(buttonSatu);
+      container.appendChild(elementSatu);
+
+      // div 2
+      var elementDua = document.createElement("div");
+      elementDua.classList += "divDua";
+
+      var imageDua = document.createElement("img");
+      imageDua.src = "icon-suvs.svg";
+      elementDua.appendChild(imageDua);
+
+      var headerDua = document.createElement("h1");
+      headerDua.innerHTML = "SUVS";
+      elementDua.appendChild(headerDua);
+
+      var pDua = document.createElement("p");
+      pDua.innerHTML =
+        "Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.";
+      elementDua.appendChild(pDua);
+
+      var buttonDua = document.createElement("button");
+      buttonDua.innerHTML = "Learn More";
+      buttonDua.classList += "buttonDua";
+      elementDua.appendChild(buttonDua);
+      container.appendChild(elementDua);
+
+      // div 3
+      var elementTiga = document.createElement("div");
+      elementTiga.classList += "divTiga";
+
+      var imageTiga = document.createElement("img");
+      imageTiga.src = "icon-luxury.svg";
+      elementTiga.appendChild(imageTiga);
+
+      var headerTiga = document.createElement("h1");
+      headerTiga.innerHTML = "LUXURY";
+      elementTiga.appendChild(headerTiga);
+
+      var pTiga = document.createElement("p");
+      pTiga.innerHTML =
+        "Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.";
+      elementTiga.appendChild(pTiga);
+
+      var buttonTiga = document.createElement("button");
+      buttonTiga.classList += "buttonTiga";
+      buttonTiga.innerHTML = "Learn More";
+      elementTiga.appendChild(buttonTiga);
+      container.appendChild(elementTiga);
+    </script>
+  </body>
+</html>
